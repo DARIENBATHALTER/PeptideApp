@@ -85,6 +85,13 @@ body {
     margin-bottom: 24px;
 }
 
+.welcome-greeting {
+    font-size: 1.1rem;
+    color: var(--primary-dark);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
 .welcome-title {
     font-size: 1.75rem;
     font-weight: 600;

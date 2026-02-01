@@ -27,6 +27,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Welcome Screen
 function updateWelcomeScreen() {
+    // Update greeting based on time of day
+    const greeting = document.getElementById('welcomeGreeting');
+    const hour = new Date().getHours();
+    let timeGreeting;
+
+    if (hour < 12) {
+        timeGreeting = 'Good morning';
+    } else if (hour < 17) {
+        timeGreeting = 'Good afternoon';
+    } else {
+        timeGreeting = 'Good evening';
+    }
+
+    if (entries.length === 0) {
+        greeting.textContent = `Welcome, Martha!`;
+    } else {
+        greeting.textContent = `${timeGreeting}, Martha!`;
+    }
+
+    // Update entries count
     const entriesText = document.getElementById('welcomeEntries');
     if (entries.length === 0) {
         entriesText.textContent = 'Start tracking your wellness journey';
